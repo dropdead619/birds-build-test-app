@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "noUnusedLocals": false,
-
     "baseUrl": ".",
     "module": "ESNext",
     "target": "es2016",

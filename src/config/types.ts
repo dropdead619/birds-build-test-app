@@ -1,11 +1,5 @@
 import type { Component } from 'vue';
 
-export const enum ReleaseType {
-  SINGLE = 'single',
-  EP = 'ep',
-  ALBUM = 'album',
-}
-
 export interface ITabItem {
   id: number
   title: string
@@ -13,31 +7,20 @@ export interface ITabItem {
   icon: Component
 }
 
-export interface Band {
-  id: string
-  name: string
+export type SellingType = 'Аукцион' | 'Разовое предложение';
+
+export interface IProductItem {
+  id: number
+  sellingType: SellingType
+  title: string
+  location: string
+  seller: string
+  productType: string
   description: string
-  coverUrl: string
-  genre: string[]
-  content?: BandContent[]
-}
-
-export interface BandContent {
-  id: string
-  bandId: string
-  type: ReleaseType
-  name: string
-  coverUrl?: string
-  year: number
-  tracks?: Track[]
-  genres: string[]
-}
-
-export interface Track {
-  id: string
-  number: number
-  albumId: string
-  trackUrl: string
-  name: string
-  duration: number
+  imageUrl: string
+  pricePerOne: number
+  count: number
+  isFavorite: boolean
+  isInDeal: boolean
+  isPaid: boolean
 }

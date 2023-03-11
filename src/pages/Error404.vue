@@ -15,7 +15,7 @@ useMeta({
       Page not found
     </h2>
     <h3 class="text-3xl">
-      Go <RouterLink class="text-blue-500 " :to="{ name: 'Bands' }">
+      Go <RouterLink class="text-blue-500 " :to="{ name: 'Warehouses.Main' }">
         back?
       </RouterLink>
     </h3>
