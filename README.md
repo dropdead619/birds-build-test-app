@@ -1,4 +1,4 @@
-# Check out this app here - [w4stedfy music app](https://w4stedfy.web.app/)
+# Check out this app here - [BirdsBuild Test App](https://birdsbuild-test-app.web.app/)
 
 ## Features:
 
@@ -7,10 +7,6 @@
 - 🍍 State Management via [Pinia](https://pinia.vuejs.org/)
 
 - 💪 TypeScript
-
-- 🌀 [Tailwind](https://tailwindcss.com/) highly customizable styles 
-
-- 🔊 [Howler.js](https://howlerjs.com/) modern audio library
 
 - 👁 Strong [Eslint](https://eslint.org) support + autofix
 
