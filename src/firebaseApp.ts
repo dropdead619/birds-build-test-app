@@ -1,6 +1,4 @@
 import { initializeApp } from 'firebase/app';
-import { collection, getFirestore } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -14,10 +12,4 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-export const storage = getStorage(app);
-export const db = getFirestore(app);
-export const bandsRef = collection(db, 'bands');
-export const contentRef = collection(db, 'content');
-export const tracksRef = collection(db, 'tracks');
+export const app = initializeApp(firebaseConfig);
