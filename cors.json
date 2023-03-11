@@ -1,0 +1,7 @@
+[
+  {
+    "origin": ["http://127.0.0.1:5173/", "https://birdsbuild-test-app.web.app/"],
+    "method": ["GET", "POST", "PUT"],
+    "maxAgeSeconds": 3600
+  }
+]

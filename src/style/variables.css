@@ -1,0 +1,13 @@
+:root {
+  /* Colors */
+  --primary: #2D3B87;
+  --secondary: #969DC3;
+  --ternary: #69C57F;
+  --back: #F4F5F9;
+
+  /* Font sizes */
+  --fz-13: 13px;
+  --fz-14: 14px;
+  --fz-15: 15px;
+  --fz-20: 20px;
+}
