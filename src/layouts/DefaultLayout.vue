@@ -3,7 +3,7 @@ import TheHeader from '@/components/TheHeader.vue';
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <TheHeader />
     <RouterView />
   </div>
