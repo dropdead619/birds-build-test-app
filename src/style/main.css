@@ -16,6 +16,10 @@
   src: url(../assets/fonts/Rubik-Bold.woff2) format('woff2');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 
 html {
   font-family: 'Rubik', system-ui, sans-serif;
