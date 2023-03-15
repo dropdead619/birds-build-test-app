@@ -9,6 +9,20 @@ const props = defineProps({
     required: true,
   },
 });
+
+const emit = defineEmits(['toggleFavorite', 'dealsAdd', 'payForDeal']);
+
+const onAddDeal = (product: IProductItem) => {
+  emit('dealsAdd', product);
+};
+
+const onFavoriteToggle = (productId: number) => {
+  emit('toggleFavorite', productId);
+};
+
+const payForDeal = (productId: number) => {
+  emit('payForDeal', productId);
+};
 </script>
 
 <template>
@@ -17,6 +31,9 @@ const props = defineProps({
       v-for="product in props.productList"
       :key="product.id"
       :product="product"
+      @toggle-favorite="onFavoriteToggle"
+      @deals-add="onAddDeal"
+      @pay-for-deal="payForDeal"
     />
   </div>
 </template>

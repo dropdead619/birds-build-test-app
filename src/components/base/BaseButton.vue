@@ -42,7 +42,20 @@ const props = defineProps({
   justify-content: center;
 }
 .btn__primary {
+  background-color: var(--primary);
+  color: white;
+  font-size: var(--fz-15);
+}
+
+.btn__secondary {
+  background-color: var(--secondary);
+  color: white;
+  font-size: var(--fz-15);
+}
+
+.btn__ternary {
   background-color: var(--back);
   font-size: var(--fz-15);
+  color: var(--primary);
 }
 </style>

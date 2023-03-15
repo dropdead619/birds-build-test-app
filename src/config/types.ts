@@ -24,3 +24,9 @@ export interface IProductItem {
   isInDeal: boolean
   isPaid: boolean
 }
+
+export interface IProductParams {
+  q?: string
+  isFavorite?: boolean
+  sellingType?: SellingType
+}

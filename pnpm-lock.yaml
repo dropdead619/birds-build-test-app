@@ -15,7 +15,6 @@ specifiers:
   vee-validate: ^4.5.11
   vite: ^4.1.4
   vue: ^3.2.47
-  vue-meta: ^3.0.0-alpha.8
   vue-router: ^4.1.6
   vue-tsc: ^0.34.7
 
@@ -26,7 +25,6 @@ dependencies:
   pinia-plugin-persistedstate: 1.6.0_pinia@2.0.14
   vee-validate: 4.5.11_vue@3.2.47
   vue: 3.2.47
-  vue-meta: 3.0.0-alpha.10_vue@3.2.47
   vue-router: 4.1.6_vue@3.2.47
 
 devDependencies:
@@ -3573,14 +3571,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /vue-meta/3.0.0-alpha.10_vue@3.2.47:
-    resolution: {integrity: sha512-rYeIGkhm1gKBcReEkPHiV6LV2Y6BZTMGTkGw1mQIZTxfFcVJL0srLZsL1zAmLeTGxMrlDYylMQEVSYRkDnwz3A==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      vue: 3.2.47
-    dev: false
 
   /vue-router/4.1.6_vue@3.2.47:
     resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}

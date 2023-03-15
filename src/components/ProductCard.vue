@@ -13,18 +13,22 @@ const props = defineProps({
   },
 });
 
+const emit = defineEmits(['toggleFavorite', 'dealsAdd', 'payForDeal']);
+
 const fullProductPrice = computed(() => {
   return addThousandsSeparator(props.product.count * props.product.pricePerOne);
 });
 
-const addToDeals = (productId: number) => {
-  // eslint-disable-next-line no-console
-  console.log('Added to deals', productId);
+const addToDeals = (product: IProductItem) => {
+  emit('dealsAdd', product);
 };
 
 const addToFavorites = (productId: number) => {
-  // eslint-disable-next-line no-console
-  console.log('Added to favorites', productId);
+  emit('toggleFavorite', productId);
+};
+
+const payForDeal = (productId: number) => {
+  emit('payForDeal', productId);
 };
 </script>
 
@@ -76,10 +80,30 @@ const addToFavorites = (productId: number) => {
         </div>
       </div>
       <div class="payment__btns">
-        <BaseButton @click="addToDeals(product.id)">
+        <BaseButton
+          v-if="!product.isInDeal"
+          variant="ternary"
+          @click="addToDeals(product)"
+        >
           Добавить в сделки
         </BaseButton>
-        <BaseButton size="icon" @click="addToFavorites(product.id)">
+        <BaseButton
+          v-else-if="!product.isPaid"
+          variant="secondary"
+          @click="payForDeal(product.id)"
+        >
+          Оплатить
+        </BaseButton>
+        <BaseButton v-else variant="ternary">
+          Оплачено
+        </BaseButton>
+
+        <BaseButton
+          :disabled="product.isInDeal"
+          :variant="product.isFavorite ? 'primary' : 'ternary'"
+          size="icon"
+          @click="addToFavorites(product.id)"
+        >
           <HeartIcon />
         </BaseButton>
       </div>
@@ -92,6 +116,8 @@ const addToFavorites = (productId: number) => {
   border: 1px solid var(--platinum);
   border-radius: 20px;
   display: flex;
+  max-width: 1166px;
+  width: 100%;
 }
 
 /* --lg breakpoint */
@@ -224,5 +250,9 @@ const addToFavorites = (productId: number) => {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+}
+
+.payment__btns > button {
+  white-space: nowrap;
 }
 </style>

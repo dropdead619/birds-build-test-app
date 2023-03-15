@@ -1,18 +1,13 @@
 <script setup lang="ts">
-import { useMeta } from 'vue-meta';
-import { DEFAULT_TITLE } from './config/constants';
-
-useMeta({
-  title: DEFAULT_TITLE,
-  description: {
-    content: 'Test App For BirdsBuild Company',
-  },
-});
+import ThePreloader from './components/ThePreloader.vue';
+import { useGlobalLoading } from './composables/useLoading';
+const { isLoading } = useGlobalLoading();
 </script>
 
 <template>
   <div>
     <RouterView />
+    <ThePreloader v-if="isLoading" />
   </div>
 </template>
 

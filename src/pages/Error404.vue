@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { useMeta } from 'vue-meta';
-
-useMeta({
-  title: '404',
-});
-</script>
-
 <template>
   <div class="flex flex-col m-auto text-center w-fit pt-12 items-center">
     <h2 class="text-9xl">

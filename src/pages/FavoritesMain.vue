@@ -1,11 +1,27 @@
 <script setup lang="ts">
-import { useMeta } from 'vue-meta';
+import ProductFilters from '@/components/ProductFilters.vue';
+import ProductList from '@/components/ProductList.vue';
+import useProduct from '@/composables/useProduct';
 
-useMeta({
-  title: 'Favorites page',
-});
+const { state, onChangeFilters, toggleIsFavorite, addToDeal } = useProduct('favorite');
 </script>
 
 <template>
-  Favorites
+  <div class="favorites">
+    <ProductFilters @filters-change="onChangeFilters" />
+    <ProductList
+      :product-list="state.products"
+      @toggle-favorite="toggleIsFavorite"
+      @deals-add="addToDeal"
+    />
+  </div>
 </template>
+
+<style scoped>
+.favorites {
+  padding: 77px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+</style>
