@@ -64,7 +64,7 @@ app.get('/products', (req, res) => {
       else {
         query = productsQueryBuilder(req, query, {
           query: false,
-          queryName: 'isFavorite',
+          queryName: 'isInDeal',
         });
       }
 
